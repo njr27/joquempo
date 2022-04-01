@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Joquempô</title>
+</head>
+
+<body>
+
+    <div class="winner-title">Jogadora 1 ganhou!</div>
+
+    <section class="score-board">
+        <span class="player-name">Jogadora 1</span>
+        <strong class="score">01</strong>
+        <strong class="versus-small">VS</strong>
+        <strong class="score">01</strong>
+        <span class="player-name">Jogadora 2</span>
+    </section>
+
+    <section class="battle-field">
+       
+        <div class="button-wrapper">
+            <button class="button-player button-stone-player-1">Pedra</button>
+            <button class="button-player button-paper-player-1">Papel</button>
+            <button class="button-player button-scissors-player-1">Tesoura</button>
+        </div>
+
+        <div class="field-box">
+            <div class="box-player field-player-1"></div>
+            <strong class="versus">VS</strong>
+            <div class="box-player field-player-2"></div>
+        </div>
+
+        <div class="button-wrapper">
+            <button class="button-player button-stone-player-2">Pedra</button>
+            <button class="button-player button-paper-player-2">Papel</button>
+            <button class="button-player button-scissors-player-2">Tesoura</button>
+        </div>
+
+    </section>
+
+    <div class="game-control">
+        <button class="button-ctrl">Iniciar</button>
+        <button class="button-ctrl">Resetar</button>
+    </div>
+<script src="index.js"></script>
+</body>
+
+</html>

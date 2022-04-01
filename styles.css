@@ -1,0 +1,140 @@
+body{
+    background-color: #82CDFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 139px 0px 160px 0px;
+}
+
+.winner-title{
+    width: 430px;
+    height: 74px;
+    background-color: #0099FF;
+    color: white;
+    font-size: 33px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.score-board{
+    width: 949px;
+    height: 148px;
+    background-color: #0099FF;
+    border-radius: 17px;
+    border-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 56px;
+}
+
+.player-name{
+    font-size: 38px;
+    color: white;
+    font-weight: 600;
+}
+
+.score{
+    background-color: #DBF1FF;
+    color: #0099FF;
+    width: 131px;
+    height: 120px;
+    line-height: 108px;
+    text-align: center;
+    font-size: 104px;
+    font-weight: 900;
+    border-radius: 17px;
+
+}
+
+.versus-small, .versus{
+    font-size: 58px;
+    font-weight: 900;
+    color: white;
+}
+
+.versus{
+    font-size: 104px;
+    font-weight: 900;
+    
+}
+
+.battle-field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.field-box{
+    width: 1313px;
+    height: 414px;
+    background-color: #0099FF;
+    border-radius: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px;
+    box-sizing: border-box;
+    margin: 0px 16px 0px 19px;
+}
+.button-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.box-player{
+    width: 464px;
+    height: 345px;
+    background-color: #DBF1FF;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-player, .button-ctrl{
+    width: 220px;
+    height: 80px;
+    background-color: #0099FF;
+    color: #DBF1FF;
+    font-size: 44px;
+    border-style: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px black;
+}
+
+.button-player:hover, .button-ctrl:hover{
+    box-shadow: 5px 5px 5px black;    
+    background-color: transparent;
+    color: #0099FF;
+    transform: scale(1.1);
+    border: 3px solid #0099FF;
+}
+
+.button-ctrl{
+    width: 238px;
+    height: 69px;
+    font-size: 33px;
+}
+
+.button-ctrl + button{
+    margin-left: 101px;
+}
+
+.move-img, .move-img-2{
+    width: 60%;
+}
+
+.move-img-2{
+    transform: scaleX(-1);
+}
