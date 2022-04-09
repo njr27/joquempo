@@ -40,10 +40,11 @@ function verifyGame() {
     }
 }
 
+
 function printGameResult(){
 
     if($gameResult == 0){
-        $winnerTitle.innerHTML = 'Empatou'
+        $winnerTitle.innerHTML = '<div class="animation-score-title"> Empatou </div>'
     }else if($gameResult == 1){      
         $winnerTitle.innerHTML = 'Jogadora 1 ganhou'
     } else if($gameResult == 2){
@@ -54,11 +55,11 @@ function printGameResult(){
 function scoreCount(){
     if($gameResult == 1 ){        
     $scoreCountP1++
-    $scoreP1.innerHTML = $scoreCountP1
+    $scoreP1.innerHTML = '<div class="animation-score">' + $scoreCountP1 + '</div>'
         
     } else if($gameResult == 2){
        $scoreCountP2++
-       $scoreP2.innerHTML = $scoreCountP2
+       $scoreP2.innerHTML = '<div class="animation-score">' + $scoreCountP2 + '</div>'
     }
 
 }
@@ -69,7 +70,7 @@ $stoneButton.addEventListener('click', function () {
     $movePlayer1 = 'stone'
     verifyGame()
     printGameResult();
-    scoreCount();
+    scoreCount()
     
 })
 
@@ -79,14 +80,14 @@ $paperButton.addEventListener('click', function () {
     verifyGame()
     printGameResult()
 
-scoreCount();})
+scoreCount()})
 $scissorsButton.addEventListener('click', function () {
     $fieldPlayer1.innerHTML = '<img class="move-img" src="scissors.png"/>'
     $movePlayer1 = 'scissors'
     verifyGame()
     printGameResult()
 
-scoreCount();})
+scoreCount()})
 
 $stoneButton2.addEventListener('click', function () {
     $fieldPlayer2.innerHTML = '<img class="move-img-2" src="stone.png"/>'
@@ -94,14 +95,14 @@ $stoneButton2.addEventListener('click', function () {
     verifyGame()
     printGameResult()
 
-scoreCount();})
+scoreCount()})
 
 $paperButton2.addEventListener('click', function () {
     $fieldPlayer2.innerHTML = '<img class="move-img-2" src="paper.png"/>'
     $movePlayer2 = 'paper'
     verifyGame()
-    printGameResult();
-    scoreCount();
+    printGameResult()
+    scoreCount()
 })
 
 $scissorsButton2.addEventListener('click', function () {
@@ -110,4 +111,4 @@ $scissorsButton2.addEventListener('click', function () {
     verifyGame()
     printGameResult()
 
-scoreCount();})
+scoreCount()})

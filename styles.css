@@ -138,3 +138,24 @@ body{
 .move-img-2{
     transform: scaleX(-1);
 }
+
+
+@keyframes animation-score {
+    from {color: greenyellow; text-shadow: 2px 1px 5px black;}
+    to {color: #0099FF;}
+}
+
+@keyframes animation-score-title {
+    from {color: red; text-shadow: 2px 1px 5px black;}
+    to {color: white;}
+}
+
+.animation-score{
+    animation-name: animation-score;
+    animation-duration: 4s;
+}
+
+.animation-score-title{
+    animation-name: animation-score-title;
+    animation-duration: 4s;
+}
