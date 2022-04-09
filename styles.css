@@ -141,7 +141,7 @@ body{
 
 
 @keyframes animation-score {
-    from {color: greenyellow; text-shadow: 2px 1px 5px black;}
+    from {color: greenyellow; text-shadow: 2px 1px 5px black; transform: scale(1.2);}
     to {color: #0099FF;}
 }
 
@@ -152,10 +152,10 @@ body{
 
 .animation-score{
     animation-name: animation-score;
-    animation-duration: 4s;
+    animation-duration: 3s;
 }
 
 .animation-score-title{
     animation-name: animation-score-title;
-    animation-duration: 4s;
+    animation-duration: 3s;
 }
