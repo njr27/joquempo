@@ -11,8 +11,12 @@ const $fieldPlayer2 = document.querySelector('.field-player-2')
 
 const $winnerTitle = document.querySelector('.winner-title')
 
+const $scoreP1 = document.querySelector('.score-p1')
+const $scoreP2 = document.querySelector('.score-p2')
 
-let $scoreP1cont = 0
+
+let $scoreCountP1 = 0
+let $scoreCountP2 = 0
 
 let $movePlayer1 = ''
 let $movePlayer2 = ''
@@ -40,14 +44,24 @@ function printGameResult(){
 
     if($gameResult == 0){
         $winnerTitle.innerHTML = 'Empatou'
-    }else if($gameResult == 1){
+    }else if($gameResult == 1){      
         $winnerTitle.innerHTML = 'Jogadora 1 ganhou'
     } else if($gameResult == 2){
     $winnerTitle.innerHTML = 'Jogadora 2 ganhou'
     }
 }
 
+function scoreCount(){
+    if($gameResult == 1 ){        
+    $scoreCountP1++
+    $scoreP1.innerHTML = $scoreCountP1
+        
+    } else if($gameResult == 2){
+       $scoreCountP2++
+       $scoreP2.innerHTML = $scoreCountP2
+    }
 
+}
 
 
 $stoneButton.addEventListener('click', function () {
@@ -55,7 +69,7 @@ $stoneButton.addEventListener('click', function () {
     $movePlayer1 = 'stone'
     verifyGame()
     printGameResult();
-    
+    scoreCount();
     
 })
 
@@ -64,27 +78,30 @@ $paperButton.addEventListener('click', function () {
     $movePlayer1 = 'paper'
     verifyGame()
     printGameResult()
-})
+
+scoreCount();})
 $scissorsButton.addEventListener('click', function () {
     $fieldPlayer1.innerHTML = '<img class="move-img" src="scissors.png"/>'
     $movePlayer1 = 'scissors'
     verifyGame()
     printGameResult()
-})
+
+scoreCount();})
 
 $stoneButton2.addEventListener('click', function () {
     $fieldPlayer2.innerHTML = '<img class="move-img-2" src="stone.png"/>'
     $movePlayer2 = 'stone'
     verifyGame()
     printGameResult()
-})
+
+scoreCount();})
 
 $paperButton2.addEventListener('click', function () {
     $fieldPlayer2.innerHTML = '<img class="move-img-2" src="paper.png"/>'
     $movePlayer2 = 'paper'
     verifyGame()
     printGameResult();
-    
+    scoreCount();
 })
 
 $scissorsButton2.addEventListener('click', function () {
@@ -92,4 +109,5 @@ $scissorsButton2.addEventListener('click', function () {
     $movePlayer2 = 'scissors'
     verifyGame()
     printGameResult()
-})
+
+scoreCount();})
