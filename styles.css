@@ -141,12 +141,12 @@ body{
 
 
 @keyframes animation-score {
-    from {color: greenyellow; text-shadow: 2px 1px 5px black; transform: scale(1.2);}
+    from {color: greenyellow; text-shadow: 2px 1px 5px black; transform: scale(1.1);}
     to {color: #0099FF;}
 }
 
 @keyframes animation-score-title {
-    from {color: red; text-shadow: 2px 1px 5px black;}
+    from {color: red; text-shadow: 2px 1px 5px black; transform: scale(1.2);}
     to {color: white;}
 }
 
