@@ -60,7 +60,7 @@ function printGameResult(){
 function resetBattlefield(){
     $fieldPlayer1.innerHTML = ''
     $fieldPlayer2.innerHTML = ''
-
+    $winnerTitle.innerHTML = 'Vencedor'
 }
 
 function resetMoveVariables(){
@@ -80,9 +80,17 @@ function resetScoreVariables(){
 
 function scorePrint(){
     if(gameResult == 1){
-        $scoreP1.innerHTML = '<div class="animation-score">' + scoreCountP1 + '</div>'
+        if(scoreCountP1 < 10){
+            $scoreP1.innerHTML = '<div class="animation-score">' +0+scoreCountP1 + '</div>'
+        } else{
+            $scoreP1.innerHTML = '<div class="animation-score">' +scoreCountP1 + '</div>'
+        }
     }else if(gameResult == 2){
-    $scoreP2.innerHTML = '<div class="animation-score">' + scoreCountP2 + '</div>'
+        if (scoreCountP2 < 10){
+            $scoreP2.innerHTML = '<div class="animation-score">' +0+scoreCountP2 + '</div>'
+        } else{
+            $scoreP2.innerHTML = '<div class="animation-score">' +scoreCountP2 + '</div>'
+        }
     }
 }
 
@@ -152,4 +160,10 @@ $buttonReset.addEventListener('click', function (){
 $buttonStart.addEventListener('click', function(){
     gameStart = !gameStart
     $buttonStart.classList.toggle('start')
+
+    if(gameStart){
+        $buttonStart.innerHTML = '▌▌ Pausar'
+    } else{
+        $buttonStart.innerHTML = '► Iniciar'
+    }
 })

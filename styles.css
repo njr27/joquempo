@@ -161,5 +161,6 @@ body{
 }
 
 .start {
-    background-color: red;
+    background-color: #005e9c;
+    box-shadow: 2px 2px  black;
 }
