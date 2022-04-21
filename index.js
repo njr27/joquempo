@@ -17,7 +17,6 @@ const $scoreP2 = document.querySelector('.score-p2')
 const $buttonReset = document.querySelector('.button-reset')
 const $buttonStart = document.querySelector('.button-start')
 
-
 let scoreCountP1 = 0
 let scoreCountP2 = 0
 
@@ -44,7 +43,6 @@ function verifyGame() {
         gameResult = 0
     }
 }
-
 
 function printGameResult(){
 
@@ -102,7 +100,6 @@ function scoreCount(){
     }
 }
 
-
 function move(moveName, movePlayer){
   if (gameStart){
     if(movePlayer == 1){
@@ -154,7 +151,9 @@ $buttonReset.addEventListener('click', function (){
     resetScoreboard()
     resetScoreVariables()
     gameResult = null
-    $winnerTitle.innerHTML = 'Vencedor'
+    gameStart = false
+    $buttonStart.innerHTML = '► Iniciar'
+    $buttonStart.classList.remove('start')
 })
 
 $buttonStart.addEventListener('click', function(){
